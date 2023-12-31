@@ -7,13 +7,15 @@ import Navbar from '../../Components/Navbar/Navbar'
 function UserData(){
 
     const user = {
-        userid: "1234",
+        UserId: "1234",
         FirstName: "Sasa",
         LastName: "King",
         UserName: "sasaking123",
         EmailAddress: "Jimmy.smith1996@gmail.com",
         Password: "Password",
-        PhoneNumber: "+1234567890"
+        PhoneNumber: "+1234567890",
+        UserType: "vendor",
+        UserAddress: "Abdo Pasha Street",
         };
 
     return(

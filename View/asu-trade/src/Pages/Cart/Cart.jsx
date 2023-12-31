@@ -7,40 +7,52 @@ import LP from "../../Assets/Laptops.png";
 
 function Cart(){
     const user = {
-        userid: "1234",
+        UserId: "1234",
         FirstName: "Sasa",
         LastName: "King",
         UserName: "sasaking123",
         EmailAddress: "Jimmy.smith1996@gmail.com",
         Password: "Password",
-        PhoneNumber: "+1234567890"
+        PhoneNumber: "+1234567890",
+        UserType: "user",
+        UserAddress: "Abdo Pasha Street",
         };
 
         const CartItems = [
             {
                 img: LP,
                 title: "APPLE iPad Pro 11” M2 Chip (4th Generation) Wi-Fi 128GB Silver",
+                price:100,
             },
             {
                 img: LP,
                 title: "APPLE iPad Pro 11” M2 Chip (4th Generation) Wi-Fi 128GB Silver",
+                price:200,
             },
             {
                 img: LP,
                 title: "APPLE iPad Pro 11” M2 Chip (4th Generation) Wi-Fi 128GB Silver",
+                price:200,
             },
             {
                 img: LP,
                 title: "APPLE iPad Pro 11” M2 Chip (4th Generation) Wi-Fi 128GB Silver",
+                price:200,
             },
         ];
 
+        const CalculatePrice = () => {
+            // Calculate total price using reduce
+            const totalPrice = CartItems.reduce((sum, item) => sum + item.price, 0);
+
         const Ordersummary=
             {
-                Price: 2000,
-                NumberOfItems: 8,
+                Price: totalPrice,
+                NumberOfItems: CartItems.length,
                 Discount: 20,
             };
+            return Ordersummary;
+        };
 
     return(
         <>
@@ -55,7 +67,7 @@ function Cart(){
                         })}
                 </div>
                 <div className='Csumm'>
-                    <OrderSummary Ordersummary={Ordersummary}/>
+                    <OrderSummary Ordersummary={CalculatePrice()}/>
                 </div>
             </div>
         </>

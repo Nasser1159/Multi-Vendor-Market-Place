@@ -64,7 +64,7 @@ const Navbar = () => {
 							/>{" "}
 							Laptops
 						</NavLink>
-						<NavLink to="/Signup">
+						<NavLink to="/WishList">
 							<FontAwesomeIcon
 								icon={faMobileScreenButton}
 								className="SubNavIcon"

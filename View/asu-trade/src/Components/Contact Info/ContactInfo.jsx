@@ -32,8 +32,7 @@ function ContactInfo({user}){
                 <button className="CIbuy">
                     <FontAwesomeIcon className="CIedit" icon={faPenToSquare} />
                 </button>
-            </div><br/>
-            <a className="CIlink">Forget Password?</a>
+            </div>
         </div>
     )
 }

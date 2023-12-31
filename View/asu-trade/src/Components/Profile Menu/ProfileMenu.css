@@ -5,8 +5,8 @@
 	border: none;
 }
 
-.Data {
-	width: 218px;
+.PMData {
+	width: 288px;
 	height: 76px;
 	font-size: 20px;
 	font-weight: 300;
@@ -17,7 +17,7 @@
 	border-color: transparent;
 }
 
-.Data:hover {
+.PMData:hover {
 	border-left-color: #ff1f00;
 	color: #ff1f00;
 }
@@ -28,10 +28,11 @@
 	justify-content: space-evenly;
 	flex-wrap: nowrap;
 	background-color: #f9f9f9;
+	width: 288px;
 }
 
 .PMfirst {
-	width: 213px;
+	width: 288px;
 	height: 64px;
 	font-size: 20px;
 	font-weight: 500;
@@ -47,7 +48,7 @@
 	line-height: 64px;
 }
 
-.icon {
+.PMicon {
 	font-size: 20px;
 	vertical-align: middle;
 	line-height: 76px;
@@ -55,21 +56,21 @@
 }
 
 .PMsecond {
-	width: 218px;
+	width: 288px;
 	height: 76px;
 	line-height: 76px;
 	vertical-align: middle;
 }
 
 .PMthird {
-	width: 166px;
+	width: 288px;
 	height: 76px;
 	line-height: 76px;
 	vertical-align: middle;
 }
 
 .PMfourth {
-	width: 160px;
+	width: 288px;
 	height: 76px;
 	line-height: 76px;
 	vertical-align: middle;
@@ -86,7 +87,7 @@
 	border-left-color: #ff1f00;
 }
 
-.plus {
-	font-size: 25px;
+.PMplus {
+	font-size: 32px;
 	font-weight: 300;
 }

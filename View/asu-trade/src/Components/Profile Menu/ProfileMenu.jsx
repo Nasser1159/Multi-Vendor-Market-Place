@@ -8,6 +8,9 @@ import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 
 function ProfileMenu({user}) {
+
+	const isVendor = user.UserType === "vendor";
+
 	return (
 		<div className="PMcontainer">
 			<div className="PMfirst">
@@ -16,8 +19,8 @@ function ProfileMenu({user}) {
 			</div>
 			<div className="PMsecond">
 				<NavLink to="/Profile">
-					<button className="Data org">
-						<FontAwesomeIcon className="icon" icon={faUserPen} />
+					<button className="PMData org">
+						<FontAwesomeIcon className="PMicon" icon={faUserPen} />
 						  
 						<span className="org">Personal Data</span>
 					</button>
@@ -25,30 +28,30 @@ function ProfileMenu({user}) {
 			</div>
 			<div className="PMthird">
 				<NavLink to="/Wishlist">
-					<button className="Data">
-						<FontAwesomeIcon className="icon" icon={faHeart} />
+					<button className="PMData">
+						<FontAwesomeIcon className="PMicon" icon={faHeart} />
 						   Wish list
 					</button>
 				</NavLink>
 			</div>
 			<div className="PMthird">
 				<NavLink to="/Cart">
-					<button className="Data">
+					<button className="PMData">
 						<FontAwesomeIcon icon={faBagShopping} />
-						   Cart
+						  Cart
 					</button>
 				</NavLink>
 			</div>
 			<div className="PMthird">
-				<button className="Data">
-					<span className="plus">+</span>
-					   Register as Vendor
+				<button className="PMData">
+					<span className="PMplus">+</span>
+      				{isVendor? <>Listings</>:<>Register as Vendor</>}
 				</button>
 			</div>
 			<div className="PMfourth">
-				<button className="Data">
+				<button className="PMData">
 					<FontAwesomeIcon
-						className="icon"
+						className="PMicon"
 						icon={faArrowRightFromBracket}
 					/>
 					 <span className="col">Log out</span>

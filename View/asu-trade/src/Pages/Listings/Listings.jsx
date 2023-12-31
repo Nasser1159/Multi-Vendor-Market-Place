@@ -1,8 +1,8 @@
 import './Listings.css';
 import CardItem from '../../Components/Card Item/CardItem';
-import VendorProfile from '../../Components/Vendor Profile/VendorProfile';
 import Navbar from '../../Components/Navbar/Navbar';
 import LP from "../../Assets/Laptops.png";
+import ProfileMenu from '../../Components/Profile Menu/ProfileMenu';
 
 function Listings(){
 
@@ -33,6 +33,18 @@ function Listings(){
         },
     ];
 
+    const user = {
+        UserId: "1234",
+        FirstName: "Sasa",
+        LastName: "King",
+        UserName: "sasaking123",
+        EmailAddress: "Jimmy.smith1996@gmail.com",
+        Password: "Password",
+        PhoneNumber: "+1234567890",
+        UserType: "user",
+        UserAddress: "Abdo Pasha Street",
+        };
+
     return(
         <>
             <Navbar/>
@@ -42,7 +54,7 @@ function Listings(){
                         </button>
                 <div className='LBig'>
                     <div className='Lchild'>
-                        <VendorProfile/>
+                        <ProfileMenu user={user}/>
                     </div>
                     <div className='LSmall'>
                         {Listings.map((data, index) => {
@@ -50,7 +62,7 @@ function Listings(){
                         })}
                     </div>
                 </div>
-</div>
+            </div>
         </>
     )
 }
